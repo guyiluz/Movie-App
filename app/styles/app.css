@@ -31,8 +31,7 @@ margin: 0 auto;
 .flex-itemCard h4 {
     font-size: 1.1rem
 }
-@media screen and (max-width: 480px){
-
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
 
   .contianerFormHeadlinAndMoviebody{
     display: flex;
@@ -62,7 +61,7 @@ justify-content: space-around;
 }
 
 .flex-itemCard{
-width: 90%;
+width: 50%;
 font-size: 0.5rem;
 }
 .flex-itemCard h4 {
@@ -77,4 +76,9 @@ border-top: none;
   margin-right: 2px;
 
 }
+.btnCoun{
+position: relative;
+    left: 610px;
+    top: 253px;
+  }
 }
