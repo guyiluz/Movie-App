@@ -1,0 +1,80 @@
+.page-title {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+input[type=search]{
+box-shadow: none;
+
+}
+.movieAndform{
+width: 40%;
+margin: 0 auto;
+
+}
+.posterContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+
+}
+.flex-itemCard img {
+    width: 300px;
+}
+
+.flex-itemCard{
+  width: 18%;
+  border: solid 0.5px #f2efef;
+  margin-top: 3px;
+}
+
+.flex-itemCard h4 {
+    font-size: 1.1rem
+}
+@media screen and (max-width: 480px){
+
+
+  .contianerFormHeadlinAndMoviebody{
+    display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+  }
+.containerx{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+width: 70%;
+justify-content: space-around;
+width: 76%;
+
+
+}
+.containerBody{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+
+justify-content: space-around;
+
+
+
+}
+
+.flex-itemCard{
+width: 90%;
+font-size: 0.5rem;
+}
+.flex-itemCard h4 {
+    font-size: 1.125rem;
+}
+.posterContainer{
+border: solid 0.5px f6f0f0;
+border-top: none;
+}
+.movieAndform{
+  margin-left: 2px;
+  margin-right: 2px;
+
+}
+}
