@@ -105,16 +105,16 @@
 
 	var Main = __webpack_require__(229);
 	var Movie = __webpack_require__(231);
-	var About = __webpack_require__(244);
-	var Examples = __webpack_require__(245);
+	var About = __webpack_require__(243);
+	var Examples = __webpack_require__(244);
 
 	//load diundatiun
 
-	__webpack_require__(246);
+	__webpack_require__(245);
 	$(document).foundation();
 
 	//App css
-	__webpack_require__(250);
+	__webpack_require__(249);
 
 	ReactDOM.render(React.createElement(
 	  Router,
@@ -25609,7 +25609,7 @@
 	var React = __webpack_require__(8);
 	var MovieForm = __webpack_require__(232);
 	var MovieBody = __webpack_require__(233);
-	var request = __webpack_require__(236);
+	var request = __webpack_require__(235);
 	var Movie = React.createClass({
 	  displayName: 'Movie',
 
@@ -25667,6 +25667,7 @@
 	  },
 	  componentDidUpdate: function componentDidUpdate(prevProps, prevState) {
 	    if (prevState.page !== this.state.page) {
+
 	      this.getMovie(this.state.title);
 	    }
 	    if (prevState.title !== this.state.title) {
@@ -25807,12 +25808,11 @@
 	  },
 
 	  render: function render() {
-	    var PageNumber = 0;
 
 	    var movieData = this.props.movieData;
 	    function renderMovies() {
 	      return movieData.map(function (movie, index) {
-	        PageNumber++;
+
 	        return React.createElement(MovieGrid, _extends({ key: movie.imdbID }, movie));
 	      });
 	    }
@@ -25853,7 +25853,6 @@
 	'use strict';
 
 	var React = __webpack_require__(8);
-	var MoviePoster = __webpack_require__(235);
 	var MovieGrid = React.createClass({
 	  displayName: 'MovieGrid',
 
@@ -25900,36 +25899,6 @@
 /* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	var React = __webpack_require__(8);
-	var MoviePoster = React.createClass({
-	  displayName: "MoviePoster",
-
-
-	  render: function render() {
-	    var movieData = this.props.movieData;
-	    var width = "width: 300px";
-
-	    return React.createElement(
-	      "div",
-	      { className: "card" },
-	      React.createElement(
-	        "div",
-	        { className: "card-divider", style: { width: '300px' } },
-	        movieData.title
-	      ),
-	      React.createElement("img", { src: movieData.poster })
-	    );
-	  }
-	});
-
-	module.exports = MoviePoster;
-
-/***/ },
-/* 236 */
-/***/ function(module, exports, __webpack_require__) {
-
 	/**
 	 * Root reference for iframes.
 	 */
@@ -25944,12 +25913,12 @@
 	  root = this;
 	}
 
-	var Emitter = __webpack_require__(237);
-	var RequestBase = __webpack_require__(238);
-	var isObject = __webpack_require__(239);
-	var isFunction = __webpack_require__(240);
-	var ResponseBase = __webpack_require__(241);
-	var shouldRetry = __webpack_require__(243);
+	var Emitter = __webpack_require__(236);
+	var RequestBase = __webpack_require__(237);
+	var isObject = __webpack_require__(238);
+	var isFunction = __webpack_require__(239);
+	var ResponseBase = __webpack_require__(240);
+	var shouldRetry = __webpack_require__(242);
 
 	/**
 	 * Noop.
@@ -26866,7 +26835,7 @@
 
 
 /***/ },
-/* 237 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -27035,13 +27004,13 @@
 
 
 /***/ },
-/* 238 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Module of mixed-in functions shared between node and client code
 	 */
-	var isObject = __webpack_require__(239);
+	var isObject = __webpack_require__(238);
 
 	/**
 	 * Expose `RequestBase`.
@@ -27632,7 +27601,7 @@
 
 
 /***/ },
-/* 239 */
+/* 238 */
 /***/ function(module, exports) {
 
 	/**
@@ -27651,7 +27620,7 @@
 
 
 /***/ },
-/* 240 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -27661,7 +27630,7 @@
 	 * @return {Boolean}
 	 * @api private
 	 */
-	var isObject = __webpack_require__(239);
+	var isObject = __webpack_require__(238);
 
 	function isFunction(fn) {
 	  var tag = isObject(fn) ? Object.prototype.toString.call(fn) : '';
@@ -27672,7 +27641,7 @@
 
 
 /***/ },
-/* 241 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -27680,7 +27649,7 @@
 	 * Module dependencies.
 	 */
 
-	var utils = __webpack_require__(242);
+	var utils = __webpack_require__(241);
 
 	/**
 	 * Expose `ResponseBase`.
@@ -27811,7 +27780,7 @@
 
 
 /***/ },
-/* 242 */
+/* 241 */
 /***/ function(module, exports) {
 
 	
@@ -27884,7 +27853,7 @@
 	};
 
 /***/ },
-/* 243 */
+/* 242 */
 /***/ function(module, exports) {
 
 	var ERROR_CODES = [
@@ -27913,7 +27882,7 @@
 
 
 /***/ },
-/* 244 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27968,7 +27937,7 @@
 	module.exports = About;
 
 /***/ },
-/* 245 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27993,16 +27962,16 @@
 	module.exports = Examples;
 
 /***/ },
-/* 246 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(247);
+	var content = __webpack_require__(246);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(249)(content, {});
+	var update = __webpack_require__(248)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -28019,10 +27988,10 @@
 	}
 
 /***/ },
-/* 247 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(248)();
+	exports = module.exports = __webpack_require__(247)();
 	// imports
 
 
@@ -28033,7 +28002,7 @@
 
 
 /***/ },
-/* 248 */
+/* 247 */
 /***/ function(module, exports) {
 
 	/*
@@ -28089,7 +28058,7 @@
 
 
 /***/ },
-/* 249 */
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -28341,16 +28310,16 @@
 
 
 /***/ },
-/* 250 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(251);
+	var content = __webpack_require__(250);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(249)(content, {});
+	var update = __webpack_require__(248)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -28367,15 +28336,15 @@
 	}
 
 /***/ },
-/* 251 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(248)();
+	exports = module.exports = __webpack_require__(247)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".page-title {\r\n  margin-top: 2.5rem;\r\n  margin-bottom: 2.5rem;\r\n}\r\n\r\ninput[type=search]{\r\nbox-shadow: none;\r\n\r\n}\r\n.movieAndform{\r\nwidth: 40%;\r\nmargin: 0 auto;\r\n\r\n}\r\n.posterContainer{\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content:space-between;\r\n\r\n}\r\n.flex-itemCard img {\r\n    width: 300px;\r\n}\r\n\r\n.flex-itemCard{\r\n  width: 18%;\r\n  border: solid 0.5px #f2efef;\r\n  margin-top: 3px;\r\n}\r\n\r\n.flex-itemCard h4 {\r\n    font-size: 1.1rem\r\n}\r\n@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {\r\n\r\n  .contianerFormHeadlinAndMoviebody{\r\n    display: flex;\r\n        flex-direction: row-reverse;\r\n        justify-content: space-between;\r\n\r\n  }\r\n.containerx{\r\ndisplay: flex;\r\nflex-direction: row;\r\nflex-wrap: wrap;\r\nwidth: 70%;\r\njustify-content: space-around;\r\nwidth: 76%;\r\n\r\n\r\n}\r\n.containerBody{\r\ndisplay: flex;\r\nflex-direction: row;\r\nflex-wrap: wrap;\r\n\r\njustify-content: space-around;\r\n\r\n\r\n\r\n}\r\n\r\n.flex-itemCard{\r\nwidth: 50%;\r\nfont-size: 0.5rem;\r\n}\r\n.flex-itemCard h4 {\r\n    font-size: 1.125rem;\r\n}\r\n.posterContainer{\r\nborder: solid 0.5px f6f0f0;\r\nborder-top: none;\r\n}\r\n.movieAndform{\r\n  margin-left: 2px;\r\n  margin-right: 2px;\r\n\r\n}\r\n.btnCoun{\r\nposition: relative;\r\n    left: 610px;\r\n    top: 253px;\r\n  }\r\n}\r\n", ""]);
+	exports.push([module.id, ".page-title {\r\n  margin-top: 2.5rem;\r\n  margin-bottom: 2.5rem;\r\n}\r\n\r\ninput[type=search]{\r\nbox-shadow: none;\r\n\r\n}\r\n.movieAndform{\r\nwidth: 40%;\r\nmargin: 0 auto;\r\n\r\n}\r\n.posterContainer{\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content:space-between;\r\n\r\n}\r\n.flex-itemCard img {\r\n    width: 300px;\r\n}\r\n\r\n.flex-itemCard{\r\n  width: 18%;\r\n  border: solid 0.5px #f2efef;\r\n  margin-top: 3px;\r\n}\r\n\r\n.flex-itemCard h4 {\r\n    font-size: 1.1rem\r\n}\r\n@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {\r\n\r\n\r\n#app{\r\n\r\n  width: 97%\r\n}\r\n  .contianerFormHeadlinAndMoviebody{\r\n    display: flex;\r\n        flex-direction: row-reverse;\r\n        justify-content: space-between;\r\n\r\n  }\r\n.containerx{\r\ndisplay: flex;\r\nflex-direction: row;\r\nflex-wrap: wrap;\r\nwidth: 70%;\r\njustify-content: space-around;\r\nwidth: 76%;\r\n\r\n\r\n}\r\n.containerBody{\r\ndisplay: flex;\r\nflex-direction: row;\r\nflex-wrap: wrap;\r\n\r\njustify-content: space-around;\r\n\r\n\r\n\r\n}\r\n\r\n.flex-itemCard{\r\nwidth: 50%;\r\nfont-size: 0.5rem;\r\n}\r\n.flex-itemCard h4 {\r\n    font-size: 1.125rem;\r\n}\r\n.posterContainer{\r\nborder: solid 0.5px f6f0f0;\r\nborder-top: none;\r\n}\r\n.movieAndform{\r\n  margin-left: 2px;\r\n  margin-right: 2px;\r\n\r\n}\r\n.btnCoun{\r\nposition: relative;\r\n    left: 610px;\r\n    top: 253px;\r\n  }\r\n}\r\n", ""]);
 
 	// exports
 

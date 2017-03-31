@@ -61,6 +61,7 @@ page:num
 },
 componentDidUpdate: function(prevProps, prevState) {
   if (prevState.page !== this.state.page) {
+
   this.getMovie(this.state.title)
     }
     if (prevState.title !== this.state.title) {
@@ -93,7 +94,9 @@ if(isLoading== false ) {
 
 return (
 <div className="containerx">
+
   <MovieBody movieData={movies} page={page} getmore={handlePageNumber} results={results} />
+
 </div>
 )
 }

@@ -32,7 +32,6 @@ new webpack.ProvidePlugin({
       MovieBody: 'app/components/MovieBody.jsx',
       About: 'app/components/About.jsx',
       MovieGrid:'app/components/MovieGrid.jsx',
-      MoviePoster: 'app/components/MoviePoster.jsx',
       Examples: 'app/components/Examples.jsx',
       openMovieMap: 'app/api/openMovieMap.jsx',
       MoiveApi:'app/api/MoiveApi.jsx',

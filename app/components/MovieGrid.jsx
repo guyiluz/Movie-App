@@ -1,6 +1,6 @@
 var React = require('react');
-var MoviePoster = require('MoviePoster');
 var MovieGrid = React.createClass({
+
 
 render: function () {
 var {Title,Poster,Year} =this.props
